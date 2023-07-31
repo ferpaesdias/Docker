@@ -1,4 +1,4 @@
-# Gerenciamendo do Dockerfile
+ # Gerenciamendo do Dockerfile
     
 
 ## Comandos para criar uma imagem a partir de um Dockerfile
@@ -11,13 +11,16 @@ No diretório que está o arquivo Dockerfile execute o sequinte conando:
 
 ## Instruções
 
-```FROM``` => Imagem base do Dockerfile.    
-Ex.: ```FROM: ubuntu:20.04```
+```FROM Imagem``` => Imagem base do Dockerfile.    
+Ex.: ```FROM ubuntu:20.04```
 
-```WORKDIR``` => Define o diretório de trabalho do Dockerfile.    
-Ex.: ```WORKDIR: /app-node```
+```WORKDIR Caminho``` => Define o diretório de trabalho do Dockerfile.    
+Ex.: ```WORKDIR /app-node```
 
-```COPY Origem destino``` => Copia arquivos do host local para a imagem.    
+```ARG Variável``` => Define o diretório de trabalho do Dockerfile.    
+Ex.: ```WORKDIR /app-node```
+
+```COPY Origem Destino``` => Copia arquivos do host local para a imagem.    
 Ex.: ```COPY . .``` => Copiará os do diretório atual do host local para o diretório ```/app-node``` que foi definido em ```WORKDIR```.   
 
 ```RUN comando``` => Executa um comando.    
@@ -25,4 +28,7 @@ Ex.: ```RUN npm install```
 
 ```ENTRYPOINT comando``` => Comando que será executado quando o container iniciar.    
 Ex.: ```ENTRYPOINT npm start``` 
+
+```EXPOSE porta``` => Executa um comando.    
+Ex.: ```EXPOSE 3000```   
 
