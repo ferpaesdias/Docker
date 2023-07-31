@@ -1,4 +1,5 @@
 # Gerenciamendo do Dockerfile
+    
 
 ## Comandos para criar uma imagem a partir de um Dockerfile
 
@@ -24,3 +25,4 @@ Ex.: ```RUN npm install```
 
 ```ENTRYPOINT comando``` => Comando que será executado quando o container iniciar.    
 Ex.: ```ENTRYPOINT npm start``` 
+
