@@ -18,7 +18,10 @@ Ex.: ```FROM ubuntu:20.04```
 Ex.: ```WORKDIR /app-node```
 
 ```ARG VAR=Valor``` => Variável usada na criação (build) da imagem. A variável criada com a instrução ARG é utilizada somente no Dockerfile, não é inserida "dentro" do container.   
-Ex.: ```ARG  PORT=3333```  => Cria a variável PORT de valor 3333.   
+Ex.: ```ARG PORT=3333```  => Cria a variável **PORT** de valor **3333**.   
+
+```ENV VAR=Valor``` => Variável usada na criação da imagem. A variável criada com a instrução ENV é utilizada é inserida "dentro" do container.   
+Ex.: ```ENV USUARIO=teste```  => Cria a variável **USUARIO** de valor **teste**.   
 
 ```COPY Origem Destino``` => Copia arquivos do host local para a imagem.    
 Ex.: ```COPY . .``` => Copiará os do diretório atual do host local para o diretório ```/app-node``` que foi definido em ```WORKDIR```.   
