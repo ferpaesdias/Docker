@@ -3,4 +3,4 @@
 
 ## Push e Pull de uma imagem 
 
-É necessário tem uma conta em <a href="https://hub.docker.com/signup" target="_blank"> Docker </a>.
+É necessário tem uma conta em [Docker](https://hub.docker.com/signup).
