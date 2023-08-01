@@ -45,6 +45,4 @@ ou
 
 ```docker run --mount type=tmpfs,destination=/CaminhoContainer imagem:1.0```    
 
-> **Obs**.: No host, os arquivos ficam em: `/var/lib/docker/volumes/`   
-
 --- 
