@@ -19,7 +19,7 @@ Fazer login na sua conta com o comando abaixo e logo depois será solicitada a s
 
 ou    
 
-```docker run --mout type=bind,source=/CaminhoHost,target=/CaminhoContainer imagem:1.0```    
+```docker run --mount type=bind,source=/CaminhoHost,target=/CaminhoContainer imagem:1.0```    
 
 ---   
 
@@ -27,6 +27,10 @@ ou
 
 ```docker run -v volumehost:/CaminhoContainer imagem:1.0```   
 
-> **Obs**.: No host, os arquivos ficam em: `/var/lib/docker/volumes/` 
+ou    
 
+```docker run --mount source=/CaminhoHost,target=/CaminhoContainer imagem:1.0```    
 
+> **Obs**.: No host, os arquivos ficam em: `/var/lib/docker/volumes/`   
+
+---   
