@@ -34,3 +34,17 @@ ou
 > **Obs**.: No host, os arquivos ficam em: `/var/lib/docker/volumes/`   
 
 ---   
+
+## Persistência de dados com TMPFS
+
+Armazena os dados na memória RAM. Só funciona em Hosts Linux.
+
+```docker run --tmpfs=/CaminhoContainer imagem:1.0```   
+
+ou    
+
+```docker run --mount type=tmpfs,destination=/CaminhoContainer imagem:1.0```    
+
+> **Obs**.: No host, os arquivos ficam em: `/var/lib/docker/volumes/`   
+
+--- 
