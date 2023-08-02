@@ -2,6 +2,15 @@
 
 ## Principais comandos do Docker
 
+#### Principais Argumentos
+```
+-d => detached   # Inicia o container com se estivesse em segundo plano
+-r => 
+-m => 
+-t => 
+-i => 
+```
+
 #### Instalação do Docker independente da distribuição Linux
 ```
 curl -fsSL https://get.docker.com/ | bash
@@ -45,6 +54,11 @@ docker container exec -ti CONTAINER_ID /bin/bash
 docker container exec -ti CONTAINER_ID /bin/sh
 ```
 
+#### Cria um container de nome NomeContainer na rede minha-bridge e expõe a porta 3000
+```
+docker run -d --network minha-bridge --name NomeContainer -p 3000:3000 imagem:1.0
+```
+
 #### Iniciar um container
 ```
 docker container start CONTAINER_ID 
@@ -76,14 +90,13 @@ docker container stats CONTAINER_ID
 ```
 
 #### Criar um container com um volume do tipo Bind
-
-```bash
-docker container run -ti --mount type=bind,src=/opt/giropops,dst=/giropops debian
+```
+docker container run -ti --mount type=bind,src=/CaminhoHost,dst=/CaminhoContainer debian
 ```
 
 #### Criar um container com um volume do tipo Bind somente leitura
-```bash
-docker container run -ti --mount type=bind,src=/opt/giropops,dst=/giropops,ro debian
+```
+docker container run -ti --mount type=bind,src=/CaminhoHost,dst=/CaminhoContainer,ro debian
 ```
 
 #### Remove todos os container que não estão em uso
